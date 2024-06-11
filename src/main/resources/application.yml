@@ -1,7 +1,9 @@
 server:
-  port: 9092
+  port: 9191
 
-topicos:
-  log:
-    request:
-      topic: "historyError.request.topic.v1"
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      group-id: historyError-request-consumer-1
+
